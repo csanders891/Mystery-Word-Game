@@ -1,11 +1,129 @@
 package mystery_word_game;
 
-import java.util.ArrayList;
+import java.util.ArrayList;   
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
-public class MysteryWordGame {
 
+public class MysteryWordGame {
+	
+	Random rand = new Random();		//declares a random variable for each subscript that points to a ramdom word
+	
+	String get4LetterWord()
+	{
+	String[] fourLetterWords = {"does", "hall", "fact", "town", "lock", "fine", "yarn", "hour", "deep", "long", 
+			"good", "come", "dawn", "pool", "huge", "mean", "nest", "from", "mask", "warm", "best", "more", "jump", "hose", 
+			"lady", "vase", "sigh", "wait", "them", "fish"};
+	
+	int index = rand.nextInt(30);
+	return fourLetterWords[index]; 
+	} 
+	
+	String get5LetterWord()
+	{
+		String[] fiveLetterWords = {"uncle", "group", "again", "straw", "groan", "roast", "ahead", "empty", "ocean", "snack", 
+				"pinch", "fudge", "habit", "carry", "laugh", "drown", "bread", "spray", "scold", "alone", "cough", "piece",
+				"video", "queen", "party", "later", "fever", "truck", "blast", "fresh"};
+		
+		int index = rand.nextInt(30);
+		return fiveLetterWords[index];
+	}
+
+	String get6LetterWord()
+	{
+		String[] sixLetterWords = {"coyote", "purple", "enough", "bright", "limber", "afraid", "across", "during", "future",
+				"around", "castle", "decade", "trophy", "coupon", "artist", "desert", "ignore", "bounce", "charge", "reason",
+				"before", "action", "scream", "gather", "tickle", "dinner", "report", "lesson", "waffle", "tuxedo"};
+		
+		int index = rand.nextInt(30);
+		return sixLetterWords[index];
+
+	}
+	
+	String get7LetterWord()
+	{
+		String[] sevenLetterWords = {"classic", "leotard", "natural", "cupcake", "weekend", "mistake", "biscuit", "unusual",
+				"harmony", "routine", "victory", "naughty", "because", "summary", "license", "aspirin", "phantom", "decline", 
+				"dynasty", "uniform", "neither", "vicious", "promise", "problem", "receive", "balance", "suggest", "replace", 
+				"another", "service"}; 
+		
+		int index = rand.nextInt(30);
+		return sevenLetterWords[index];
+	}
+
+	String get8LetterWord()
+	{
+		String[] eightLetterWords = {"backyard", "alphabet", "favorite", "terrible", "cardigan", "sailboat", "continue", 
+				"campaign", "majority", "fourteen", "argument", "remember", "probably", "entrance", "railroad", "portrait",
+				"disaster", "lemonade", "airplane", "mischief", "outside", "together", "bulletin", "behavior", "cupboard",
+				"dinosaur", "innocent", "carnival", "shepherd", "decision"};
+		
+		int index = rand.nextInt(30);
+		return eightLetterWords[index];
+	}
+  
+	String get9LetterWord()
+	{
+		String[] nineLetterWords = {"yesterday", "newspaper", "microwave", "happiness", "haphazard", "afternoon", "butterfly",
+				"mandatory", "whirlwind", "ballerina", "emergency", "saxophone", "southwest", "important",
+				"crocodile", "situation", "adventure", "exhausted", "geography", "universal", "beautiful", "challenge", 
+				"paparazzi", "outspoken", "apologize", "excellent", "interrupt", "represent", "telephone", "chocolate"};
+		
+		int index = rand.nextInt(30);
+		return nineLetterWords[index];
+		 
+	}
+
+	String get10LetterWord()
+	{
+		String[] tenLetterWords = {"instructor", "misfortune", "university", "everything", "flashlight", "playground", 
+				"conscience", "lieutenant", "restaurant", "incredible", "allegiance", "reschedule", "dictionary",
+				"accomplish", "photograph", "disqualify", "ridiculous", "chimpanzee", "difficulty", "heartbreak", "centimeter",
+		"commercial", "skateboard", "scientific", "nonchalant", "department", "psychology", "tournament", "discipline", 
+		"enterprise"};
+		
+		int index = rand.nextInt(30);
+		return tenLetterWords[index];
+	}
+	
+	String get11LetterWord()
+	{
+		String[] elevenLetterWords = {"combination", "everlasting", "counterfeit", "screwdriver", "corporation", 
+				"appointment", "supermarket", "trustworthy", "microscopic", "interesting", "independent", "thermometer", 
+				"imagination", "congressman", "radioactive", "subtraction", "heavyweight", "babysitting", "association", 
+				"incorrectly", "responsible", "opportunity", "information", "celebration", "gallbladder", "chlorophyll", 
+				"protagonist", "disturbance", "cauliflower", "metaphysics"};	
+		
+		int index = rand.nextInt(30);
+		return elevenLetterWords[index];
+	}
+	
+	String get12LetterWord()
+	{
+		String[] twelveLetterWords = {"contemporary", "conversation", "encyclopedia", "satisfactory", "subconscious", 
+				"nevertheless", "affectionate", "tuberculosis", "flamethrower", "relationship", "superstition", "mysteriously",
+				"thanksgiving", "anthropology", "championship", "professional", "metropolitan", "irresistible", "hypothetical",
+				"handkerchief", "circumstance", "kindergarten", "neighborhood", "microbiology", "multivitamin", "dictatorship",
+				"stratusphere", "predetermine", "cardiologist", "intermediate"};	
+
+		int index = rand.nextInt(30);
+		return twelveLetterWords[index];
+	}
+
+	
+	String get13LetterWord()
+	{
+	String[] thirteenLetterWords = {"weightlifting", "participation", "parallelogram", "metamorphosis", "entertainment", 
+			"international", "autobiography", "overstimulate", "disappearance", "sportsmanship", "disrespectful", 
+			"meteorologist", "controversial", "uncomfortable", "concentration", "contortionist", "comprehension", 
+			"carbohydrates", "communication", "misunderstood", "advertisement", "configuration", "valedictorian", 
+			"extraordinary", "inappropriate", "developmental", "biodegradable", "hallucination", "semiconscious",
+			"multicellular"};
+	
+	int index = rand.nextInt(30);
+	return thirteenLetterWords[index];
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -16,35 +134,48 @@ public class MysteryWordGame {
 		String begin = scan.nextLine();
 		char start = begin.charAt(0);
 		
+		MysteryWordGame hangman = new MysteryWordGame();
+		
 		//First word of 4 letters
-		game("lamp", "****");
+		String s1 = hangman.get4LetterWord();
+		game(s1, "****"); 
 		
 		//Second word of 5 letters
-		game("uncle", "*****");
+		String s2 = hangman.get5LetterWord();
+		game(s2, "*****");
 		
 		//Third word of 6 letters
-		game("coyote", "******");
+		String s3 = hangman.get6LetterWord();
+		game(s3, "******");
 		
 		//Fourth word of 7 letters
-		game("classic", "*******");
+		String s4 = hangman. get7LetterWord();
+		game(s4, "*******");
 		
 		//Fifth word of 8 letters
-		game("favorite", "********");
+		String s5 = hangman.get8LetterWord();
+		game(s5, "********");
 		
 		//Sixth word of 9 letters
-		game("yesterday", "*********");
+		String s6 = hangman.get9LetterWord();
+		game(s6, "*********");
 		
 		//Seventh word of 10 letters
-		game("instructor", "**********");
+		String s7 = hangman.get10LetterWord();
+		game(s7, "**********");
 		
 		//Eighth word of 11 letters
-		game("combination", "***********");
+		String s8 = hangman.get11LetterWord();
+		game(s8, "***********");
 		
 		//Ninth word of 12 letters
-		game("contemporary", "************");
+
+		String s9 = hangman.get12LetterWord();
+		game(s9, "************");
 		
 		//Last word of 13 letters 
-		game("weightlifting", "*************");
+		String s10 = hangman.get13LetterWord();
+		game(s10, "*************");
 		
 		System.out.println("Congratulations!!!!!   You beat the game");
 		System.out.println("Thanks for playing");
