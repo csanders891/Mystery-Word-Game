@@ -8,23 +8,23 @@ import java.util.Scanner;
 
 public class MysteryWordGame {
 	
-	Random rand = new Random();		//declares a random variable for each subscript that points to a ramdom word
+	Random rand = new Random();		//declares a random variable for each subscript that points to a random word
 	
 	String get4LetterWord()
 	{
 	String[] fourLetterWords = {"does", "hall", "fact", "town", "lock", "fine", "yarn", "hour", "deep", "long", 
 			"good", "come", "dawn", "pool", "huge", "mean", "nest", "from", "mask", "warm", "best", "more", "jump", "hose", 
-			"lady", "vase", "sigh", "wait", "them", "fish"};
+			"lady", "vase", "wait", "them", "fish", "dust"};
 	
 	int index = rand.nextInt(30);
 	return fourLetterWords[index]; 
 	} 
-	
+	 
 	String get5LetterWord()
 	{
-		String[] fiveLetterWords = {"uncle", "group", "again", "straw", "groan", "roast", "ahead", "empty", "ocean", "snack", 
-				"pinch", "fudge", "habit", "carry", "laugh", "drown", "bread", "spray", "scold", "alone", "cough", "piece",
-				"video", "queen", "party", "later", "fever", "truck", "blast", "fresh"};
+		String[] fiveLetterWords = {"uncle", "group", "again", "straw", "roast", "ahead", "empty", "ocean", "snack", 
+				"pinch", "habit", "carry", "laugh", "drown", "bread", "spray", "scold", "alone", "cough", "piece",
+				"video", "queen", "party", "later", "fever", "truck", "blast", "fresh", "bench", "relax"};
 		
 		int index = rand.nextInt(30);
 		return fiveLetterWords[index];
@@ -32,7 +32,7 @@ public class MysteryWordGame {
 
 	String get6LetterWord()
 	{
-		String[] sixLetterWords = {"coyote", "purple", "enough", "bright", "limber", "afraid", "across", "during", "future",
+		String[] sixLetterWords = {"coyote", "purple", "enough", "bright", "gallon", "afraid", "across", "during", "future",
 				"around", "castle", "decade", "trophy", "coupon", "artist", "desert", "ignore", "bounce", "charge", "reason",
 				"before", "action", "scream", "gather", "tickle", "dinner", "report", "lesson", "waffle", "tuxedo"};
 		
@@ -79,9 +79,10 @@ public class MysteryWordGame {
 	{
 		String[] tenLetterWords = {"instructor", "misfortune", "university", "everything", "flashlight", "playground", 
 				"conscience", "lieutenant", "restaurant", "incredible", "allegiance", "reschedule", "dictionary",
-				"accomplish", "photograph", "disqualify", "ridiculous", "chimpanzee", "difficulty", "heartbreak", "centimeter",
-		"commercial", "skateboard", "scientific", "nonchalant", "department", "psychology", "tournament", "discipline", 
-		"enterprise"};
+				"accomplish", "photograph", "disqualify", "ridiculous", "chimpanzee", "difficulty", "metabolism", 
+				"centimeter", "commercial", "skateboard", "scientific", "nonchalant", "department", "psychology", "tournament", "discipline", 
+		        "enterprise", "discipline"};
+		
 		
 		int index = rand.nextInt(30);
 		return tenLetterWords[index];
@@ -93,8 +94,8 @@ public class MysteryWordGame {
 				"appointment", "supermarket", "trustworthy", "microscopic", "interesting", "independent", "thermometer", 
 				"imagination", "congressman", "radioactive", "subtraction", "heavyweight", "babysitting", "association", 
 				"incorrectly", "responsible", "opportunity", "information", "celebration", "gallbladder", "chlorophyll", 
-				"protagonist", "disturbance", "cauliflower", "metaphysics"};	
-		
+				"protagonist", "disturbance", "cauliflower", "metaphysics"};
+				
 		int index = rand.nextInt(30);
 		return elevenLetterWords[index];
 	}
@@ -102,10 +103,11 @@ public class MysteryWordGame {
 	String get12LetterWord()
 	{
 		String[] twelveLetterWords = {"contemporary", "conversation", "encyclopedia", "satisfactory", "subconscious", 
-				"nevertheless", "affectionate", "tuberculosis", "flamethrower", "relationship", "superstition", "mysteriously",
-				"thanksgiving", "anthropology", "championship", "professional", "metropolitan", "irresistible", "hypothetical",
-				"handkerchief", "circumstance", "kindergarten", "neighborhood", "microbiology", "multivitamin", "dictatorship",
-				"stratusphere", "predetermine", "cardiologist", "intermediate"};	
+				"nevertheless", "affectionate", "tuberculosis", "flamethrower", "relationship", "superstition", 
+				"mysteriously", "anthropology", "professional", "metropolitan", "irresistible", "hypothetical", 
+				"handkerchief", "circumstance", "kindergarten", "neighborhood", "microbiology", "multivitamin", 
+				"dictatorship", "predetermine", "cardiologist", "intermediate", "refrigerator", "confidential", 
+				"alliteration"};	
 
 		int index = rand.nextInt(30);
 		return twelveLetterWords[index];
@@ -117,9 +119,9 @@ public class MysteryWordGame {
 	String[] thirteenLetterWords = {"weightlifting", "participation", "parallelogram", "metamorphosis", "entertainment", 
 			"international", "autobiography", "overstimulate", "disappearance", "sportsmanship", "disrespectful", 
 			"meteorologist", "controversial", "uncomfortable", "concentration", "contortionist", "comprehension", 
-			"carbohydrates", "communication", "misunderstood", "advertisement", "configuration", "valedictorian", 
+		    "communication", "misunderstood", "advertisement", "configuration", "valedictorian", 
 			"extraordinary", "inappropriate", "developmental", "biodegradable", "hallucination", "semiconscious",
-			"multicellular"};
+			"multicellular", "materialistic"};
 	
 	int index = rand.nextInt(30);
 	return thirteenLetterWords[index];
